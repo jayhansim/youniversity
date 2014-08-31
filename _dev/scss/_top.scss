@@ -1,0 +1,186 @@
+// top bar
+
+.top {
+  background: $color;
+  padding: 5px 0;
+  color: #fff;
+
+  &-logo {
+    display: inline-block;
+    @include size(490px/2 80px/2);
+    @include hide-text;
+    background: url(../img/youniversity-logo.png);
+    @include background-size(490/2, 80/2);
+    position: relative;
+    left: -6px;
+  }
+}
+
+
+
+// nav bar
+.nav {
+  background: $brand-darkblue;
+  height: 50px;
+  line-height: 50px;
+  color: $color-reverse-lightblue;
+
+  [role="navigation"] {
+    position: relative;
+  }
+
+  a {
+    color: $color-reverse-lightblue;
+
+    &:hover {
+      color: #fff;
+    }
+  }
+
+  // compare
+  &-main {
+    float: left;
+
+    > a {
+      color: #fff;
+      background: lighten($brand-darkblue, 6);
+      padding: 0 20px;
+      display: inline-block;
+      font-weight: 700;
+      border: 1px solid darken($brand-darkblue, 5);
+      border-width: 0 1px;
+      margin-left: -1px;
+
+      .arrow-down {
+        display: inline-block;
+        @include size(18px/2 10px/2);
+        background: url(../img/nav-arrowdown.png) no-repeat;
+        @include background-size(18/2, 10/2);
+        margin-right: 5px;
+        vertical-align: middle;
+        position: relative;
+        top: -1px;
+      }
+    }
+
+    &:hover {
+
+      > a {
+        background-color: lighten($brand-darkblue, 8);
+      }
+    }
+  }
+
+  &-popular {
+    padding: 0 20px;
+    overflow: hidden;
+    height: 50px;
+
+    &-menu {
+      display: inline;
+      padding-left: 0;
+
+      li {
+        display: inline-block;
+        margin: 0 5px;
+      }
+    }
+  }
+
+  &-cheatsheet {
+    float: right;
+    padding: 0 20px;
+    border: 1px solid darken($brand-darkblue, 5);
+    border-width: 0 1px;
+  }
+}
+
+// dropdown
+.nav-dropdown {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  z-index: 10;
+  background: #fff;
+  box-shadow: 0 1px 10px rgba(0,0,0,.5);
+  width: 100%;
+  line-height: $line-height;
+  @include transition(opacity 0.3s ease-in-out, visibility 0.3s ease-in-out);
+
+  .nav-main:hover & {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  > ul {
+    display: table;
+    width: 100%;
+    padding-left: 0;
+    margin-bottom: 0;
+    table-layout: fixed;
+  }
+
+  &-column {
+    display: table-cell;
+    border-right: 1px solid $border-color;
+
+
+    &-last {
+      background-color: lighten($border-color,8);
+      border-right: none;
+    }
+  }
+
+  &-header {
+    text-transform: uppercase;
+    color: $brand-darkblue;
+    @include font-size(1.4);
+    padding: 0 20px 10px;
+    display: block;
+    font-weight: 700;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+
+
+  &-menu {
+    padding: 20px 0;
+
+    + .nav-dropdown-menu {
+      border-top: 1px solid $border-color;
+    }
+
+    ul {
+      padding-left: 0;
+      list-style: none;
+
+      a {
+        color: $color-lighter;
+        display: block;
+        padding: 5px 20px;
+
+        &:hover {
+          background: lighten($border-color,5);
+          color: $color-lighter;
+        }
+
+        &.active {
+          font-weight: 700;
+          background: lighten($border-color,5);
+        }
+      }
+    }
+  }
+
+  &-column-last {
+
+  }
+
+}
+
+
+
+
+
+

@@ -1,0 +1,31 @@
+
+.form-control, .btn {
+  border: none;
+}
+
+.form-control {
+  box-shadow: none;
+}
+
+.btn {
+  padding-top: 7px;
+  padding-bottom: 7px;
+
+  &.btn-default {
+    color: $brand-darkblue;
+    @include transition(background-color 0.1s linear);
+
+    &:hover, &:focus, &:active {
+      background-color: lighten($color-reverse-lightblue,10);
+      color: $brand-darkblue;
+    }
+  }
+}
+
+.input-group-btn:last-child>.btn, .input-group-btn:last-child>.btn-group {
+  margin-left: 0;
+}
+
+select.form-control {
+  background: $color-lightgrey;
+}

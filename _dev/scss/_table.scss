@@ -1,0 +1,9 @@
+.table {
+  border-top: 1px solid $brand-lightblue;
+
+  th {
+    text-transform: uppercase;
+    background: $color-lightgrey url(../img/table-th-bg.jpg);
+    border-bottom: none !important;
+  }
+}

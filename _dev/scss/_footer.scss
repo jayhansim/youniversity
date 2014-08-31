@@ -1,0 +1,152 @@
+// Cheat Sheet
+
+.cheatsheet-signup {
+  background: $brand-lightblue url(../img/cheatsheet-signup-bg.jpg);
+  @include background-size(1287/2, 795/2);
+  color: #fff;
+  text-align: center;
+  padding: 30px 0 40px;
+  position: relative;
+
+  &-title {
+    font-weight: 700;
+    @include font-size(2.4);
+    margin-bottom: 20px;
+  }
+
+  // change the placeholder color
+  ::-webkit-input-placeholder {color: $color-reverse-lightblue;}
+  :-moz-placeholder { color: $color-reverse-lightblue; }
+  ::-moz-placeholder { color: $color-reverse-lightblue; }
+  :-ms-input-placeholder { color: $color-reverse-lightblue; }
+
+  &:after {
+    position: absolute;
+    content: '';
+    display: none;
+    @include size(230px 137px);
+    background: url(../img/cheatsheet-signup-yuno.png) no-repeat;
+    @include background-size(230, 137);
+    right: 0;
+    bottom: 0;
+  }
+}
+
+@media (min-width: 992px) {
+  .cheatsheet-signup:after {
+    display: block;
+  }
+}
+
+@media (min-width: 1200px) {
+  .cheatsheet-signup:after {
+    right: 5%;
+  }
+}
+
+.input-cheatsheet-signup {
+
+  .form-control {
+    background: $brand-darkblue;
+    color: #fff;
+    @include font-size(1.4);
+  }
+
+  .input-group-btn {
+    .btn {
+      @include font-size(1.4);
+      font-weight: 700;
+    }
+  }
+}
+
+
+// Footer
+.footer {
+  padding: 30px 0 20px;
+  background-color: $color;
+  color: $color-reverse-grey;
+  @include font-size(1.3);
+
+  &-title {
+    font-weight: 700;
+  }
+
+  a {
+    color: desaturate(darken($color-reverse-grey,10),5);
+
+    &:hover {
+      color: desaturate(darken($color-reverse-grey,5),5);
+    }
+  }
+
+  &-linklist {
+    a {
+      display: inline-block;
+      padding: 5px 0;
+    }
+  }
+
+  &-bottom {
+    border-top: 1px solid darken($color,5);
+    padding-top: 20px;
+    margin-top: 20px;
+    @include font-size(1.2);
+    line-height: 29px;
+
+    &-tagline {
+      font-weight: 700;
+      font-style: italic;
+      margin: 0;
+      line-height: inherit;
+      padding-left: 190px;
+    }
+
+    &-links {
+      text-align: right;
+      margin-bottom: 0;
+
+      li:last-child {
+        padding-right: 0;
+      }
+    }
+  }
+
+  .top-logo {
+    @include size(180px 29px);
+    @include background-size(180, 29);
+    float: left;
+    margin-right: 10px;
+    position: relative;
+    top: -8px;
+  }
+}
+
+@media (max-width:750px) {
+  .footer {
+
+    .top-logo {
+      float: none;
+    }
+
+    &-bottom {
+      line-height: $line-height;
+
+      &-tagline {
+        padding-left: 0;
+      }
+      &-left, &-right {
+        text-align: center;
+      }
+
+      &-right {
+        padding-top: 20px;
+      }
+
+      &-links {
+        text-align: center;
+      }
+    }
+
+  }
+}

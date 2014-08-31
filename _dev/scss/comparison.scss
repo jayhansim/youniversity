@@ -1,0 +1,165 @@
+@import "bourbon";
+
+// local variables and mixins
+@import "_var";
+@import "_mixin";
+
+$color-tab: #4a667d;
+$color-tab-selected: #ffe87a;
+
+// header
+.comparison-header {
+  background: #81cce4 url(../img/comparison-header-bg.jpg) center top no-repeat;
+  background-size: auto 100%;
+  padding-top: 30px;
+
+  &-label {
+    font-weight: 700;
+    color: #fff;
+    background-color: $brand-lightblue;
+    height: 26px;
+    line-height: 26px;
+    padding: 0 8px 0 10px;
+    margin-bottom: 10px;
+    float: left;
+    @include font-size(1.2);
+    position: relative;
+
+    &:before, &:after {
+      position: absolute;
+      content: '';
+      display: block;
+    }
+
+    &:before {
+      @include size(0 0);
+      border: 3px solid;
+      border-color: darken($brand-lightblue,10) darken($brand-lightblue,10) transparent transparent ;
+      left: 0;
+      top: 100%;
+    }
+
+    &:after {
+      @include size(6px 100%);
+      background: url(../img/comparison-header-label.svg) no-repeat top;
+      background-size: 6px auto;
+      top: 0;
+      left: 100%;
+    }
+  }
+
+  &-title {
+    clear: left;
+    float: left;
+    font-family: $amatic;
+    @include font-size(6);
+    margin-top: 0;
+    text-shadow: 2px 2px 0 rgba(#fff,.3);
+    background: url(../img/dotted-underline.png) bottom left repeat-x;
+    background-size: auto 4px;
+    display: inline-block;
+  }
+
+  &-description {
+    clear: left;
+  }
+
+  &-tabs {
+    margin: 20px 0 0;
+    @include font-size(1.6);
+    vertical-align: bottom;
+
+    li {
+      display: inline-block;
+      width: 33%;
+      margin-left: .5%;
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      a {
+        display: block;
+        padding: 15px;
+        text-align: center;
+        background: $color-tab;
+        color: #9eaebc;
+        border-top: 1px solid transparent;
+        font-weight: 700;
+        position: relative;
+
+        &:hover {
+          background-color: darken($color-tab,8);
+        }
+      }
+
+      &.selected {
+        a {
+          background-color: $color-tab-selected;
+          color: $color;
+          border-top: 1px dashed darken($color-tab-selected, 20);
+          box-shadow: 0 -3px 0 $color-tab-selected;
+
+          &:after {
+            position: absolute;
+            width: 0;
+            height: 0;
+            content: '';
+            display: block;
+            border: 10px solid;
+            border-color: $color-tab-selected transparent transparent;
+            top: 100%;
+            left: 50%;
+            margin-left: -10px;
+            z-index: 2;
+          }
+        }
+      }
+    }
+  }
+}
+
+// main
+.comparison-main {
+  padding: 20px 0 30px;
+}
+
+.comparison-filters {
+  margin: 20px 0;
+
+  select.form-control {
+    @include font-size(1.2);
+    color: $color-lighter;
+    @include size(200px 40px);
+    padding-left: 20px;
+
+  }
+}
+
+.comparison-table {
+  thead {
+    > tr {
+      >th {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        text-align: center;
+      }
+    }
+  }
+
+  tbody {
+    > tr {
+      td {
+        text-align: center;
+        border-top: none;
+        border-bottom: 1px solid $border-color;
+        // vertical-align: middle;
+      }
+    }
+  }
+
+  .column-action {
+    background: lighten($color-lightgrey,3);
+    vertical-align: middle;
+  }
+}
