@@ -155,7 +155,7 @@ $color-tab-selected: #ffe87a;
         text-align: center;
         border-top: none;
         border-bottom: 1px solid $border-color;
-        //vertical-align: middle;
+        vertical-align: middle;
         padding-top: 15px;
         padding-bottom: 15px;
 
@@ -207,6 +207,160 @@ $color-tab-selected: #ffe87a;
   &-fees {
     &-title {
       margin: 0
+    }
+  }
+}
+
+// scorecard
+
+.scorecard {
+  background: url(../img/comparison-rating-good.png) no-repeat;
+  @include size(90px 102px);
+  @include background-size(90, 102);
+  display: inline-block;
+  color: #fff;
+  cursor: pointer;
+
+  &.scorecard-best {
+    background-image: url(../img/comparison-rating-best.png);
+  }
+
+  &-rating {
+    margin-top: 8px;
+    line-height: 20px;
+  }
+
+  &-score {
+    margin: 2px 0 0;
+    line-height: 40px;
+    @include font-size(3.6);
+    font-weight: 700;
+  }
+
+  &-expand {
+    @include size(20px 20px);
+    border-radius: 50%;
+    background: saturate(darken($brand-lightblue,14),10);
+    margin: 0 auto;
+    position: relative;
+
+    .scorecard-best & {
+      background: saturate(darken($color-success,12),10);
+    }
+
+    &:before {
+      content: '+';
+      font-weight: 700;
+      @include font-size(1.8);
+      line-height: 20px;
+    }
+  }
+
+  &:hover {
+    .scorecard-content {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  &-content {
+    opacity: 0;
+    visibility: hidden;
+    @include transition(opacity 0.3s ease-in-out, visibility 0.3s ease-in-out);
+    @include font-size(1.3);
+    text-align: left;
+    position: absolute;
+    color: $color;
+    border: 3px solid $color-lighter;
+    border-radius: 6px;
+    background: #fff;
+    top: 110%;
+    left: 50%;
+    margin-left: -150px;
+    width: 300px;
+    box-shadow: 0 1px 5px rgba(0,0,0,.3);
+    cursor: auto;
+    z-index: 5;
+
+    &-inner {
+      position: relative;
+
+      &:after {
+        position: absolute;
+        content: '';
+        width: 0;
+        height: 0;
+        border-width: 10px;
+        border-style: solid;
+        border-color: transparent transparent #fff;
+        display: block;
+        top: -20px;
+        left: 50%;
+        margin-left: -10px;
+      }
+
+      &:before {
+        position: absolute;
+        content: '';
+        width: 0;
+        height: 0;
+        border-width: 12px;
+        border-style: solid;
+        border-color: transparent transparent $color-lighter;
+        display: block;
+        top: -27px;
+        left: 50%;
+        margin-left: -12px;
+      }
+    }
+  }
+
+  &-list {
+    list-style: none;
+    padding: 10px;
+    margin-bottom: 0;
+
+    &-criteria {
+      font-weight: 700;
+      width: 52%;
+      text-align: right;
+      padding-right: 8px;
+    }
+
+    li {
+      display: table;
+      width: 100%;
+
+      > * {
+        display: table-cell;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        vertical-align: middle;
+      }
+    }
+  }
+
+  &-star {
+    img {
+      width: 18px;
+      display: block;
+      float: left;
+      margin-right: 2px;
+    }
+
+    span {
+      margin-left: 5px;
+    }
+  }
+
+  &-comment {
+    color: #fff;
+    background: $brand-lightblue;
+    padding: 10px;
+    border-radius: 0 0 3px 3px;
+
+    .scorecard-best & {
+      background-color: $color-success;
     }
   }
 }

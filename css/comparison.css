@@ -103,6 +103,7 @@
   text-align: center;
   border-top: none;
   border-bottom: 1px solid #dce2ee;
+  vertical-align: middle;
   padding-top: 15px;
   padding-bottom: 15px; }
   .comparison-table tbody > tr td:first-child {
@@ -132,3 +133,120 @@
   margin: 0; }
 .uni-fees-title {
   margin: 0; }
+
+.scorecard {
+  background: url(../img/comparison-rating-good.png) no-repeat;
+  height: 102px;
+  width: 90px;
+  -webkit-background-size: 90px 102px;
+  background-size: 90px 102px;
+  display: inline-block;
+  color: #fff;
+  cursor: pointer; }
+  .scorecard.scorecard-best {
+    background-image: url(../img/comparison-rating-best.png); }
+  .scorecard-rating {
+    margin-top: 8px;
+    line-height: 20px; }
+  .scorecard-score {
+    margin: 2px 0 0;
+    line-height: 40px;
+    font-size: 36px;
+    font-size: 3.6rem;
+    font-weight: 700; }
+  .scorecard-expand {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: #0e83b4;
+    margin: 0 auto;
+    position: relative; }
+    .scorecard-best .scorecard-expand {
+      background: #158a6a; }
+    .scorecard-expand:before {
+      content: '+';
+      font-weight: 700;
+      font-size: 18px;
+      font-size: 1.8rem;
+      line-height: 20px; }
+  .scorecard:hover .scorecard-content {
+    opacity: 1;
+    visibility: visible; }
+  .scorecard-content {
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    -moz-transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    font-size: 13px;
+    font-size: 1.3rem;
+    text-align: left;
+    position: absolute;
+    color: #2e3137;
+    border: 3px solid #6a717f;
+    border-radius: 6px;
+    background: #fff;
+    top: 110%;
+    left: 50%;
+    margin-left: -150px;
+    width: 300px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+    cursor: auto;
+    z-index: 5; }
+    .scorecard-content-inner {
+      position: relative; }
+      .scorecard-content-inner:after {
+        position: absolute;
+        content: '';
+        width: 0;
+        height: 0;
+        border-width: 10px;
+        border-style: solid;
+        border-color: transparent transparent #fff;
+        display: block;
+        top: -20px;
+        left: 50%;
+        margin-left: -10px; }
+      .scorecard-content-inner:before {
+        position: absolute;
+        content: '';
+        width: 0;
+        height: 0;
+        border-width: 12px;
+        border-style: solid;
+        border-color: transparent transparent #6a717f;
+        display: block;
+        top: -27px;
+        left: 50%;
+        margin-left: -12px; }
+  .scorecard-list {
+    list-style: none;
+    padding: 10px;
+    margin-bottom: 0; }
+    .scorecard-list-criteria {
+      font-weight: 700;
+      width: 52%;
+      text-align: right;
+      padding-right: 8px; }
+    .scorecard-list li {
+      display: table;
+      width: 100%; }
+      .scorecard-list li > * {
+        display: table-cell;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        vertical-align: middle; }
+  .scorecard-star img {
+    width: 18px;
+    display: block;
+    float: left;
+    margin-right: 2px; }
+  .scorecard-star span {
+    margin-left: 5px; }
+  .scorecard-comment {
+    color: #fff;
+    background: #29aae1;
+    padding: 10px;
+    border-radius: 0 0 3px 3px; }
+    .scorecard-best .scorecard-comment {
+      background-color: #28b48e; }
