@@ -130,7 +130,7 @@ $color-tab-selected: #ffe87a;
   select.form-control {
     @include font-size(1.2);
     color: $color-lighter;
-    @include size(200px 40px);
+    width: 200px;
     padding-left: 20px;
 
   }
@@ -148,12 +148,20 @@ $color-tab-selected: #ffe87a;
   }
 
   tbody {
+
     > tr {
+
       td {
         text-align: center;
         border-top: none;
         border-bottom: 1px solid $border-color;
-        // vertical-align: middle;
+        //vertical-align: middle;
+        padding-top: 15px;
+        padding-bottom: 15px;
+
+        &:first-child {
+          text-align: left;
+        }
       }
     }
   }
@@ -161,5 +169,44 @@ $color-tab-selected: #ffe87a;
   .column-action {
     background: lighten($color-lightgrey,3);
     vertical-align: middle;
+  }
+}
+
+.more-info {
+  color: $color-lighter;
+  @include font-size(1.2);
+
+  + .uni-fees-title {
+    margin-top: 10px;
+  }
+}
+
+.uni {
+  &-logo {
+    float: left;
+    max-width: 100px;
+    max-height: 50px;
+    margin-right: 10px;
+  }
+
+  &-info {
+    padding-left: 110px;
+
+    &-title {
+      margin: 0;
+      font-weight: bold;
+    }
+  }
+
+  &-credits {
+    &-title {
+      margin: 0;
+    }
+  }
+
+  &-fees {
+    &-title {
+      margin: 0
+    }
   }
 }

@@ -20,6 +20,11 @@
       color: $brand-darkblue;
     }
   }
+
+  &.btn-success {
+    background-color: $color-success;
+    box-shadow: inset 0 -2px 0 rgba(0,0,0,.2);
+  }
 }
 
 .input-group-btn:last-child>.btn, .input-group-btn:last-child>.btn-group {

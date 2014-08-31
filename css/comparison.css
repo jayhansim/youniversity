@@ -92,7 +92,6 @@
     font-size: 12px;
     font-size: 1.2rem;
     color: #6a717f;
-    height: 40px;
     width: 200px;
     padding-left: 20px; }
 
@@ -103,7 +102,33 @@
 .comparison-table tbody > tr td {
   text-align: center;
   border-top: none;
-  border-bottom: 1px solid #dce2ee; }
+  border-bottom: 1px solid #dce2ee;
+  padding-top: 15px;
+  padding-bottom: 15px; }
+  .comparison-table tbody > tr td:first-child {
+    text-align: left; }
 .comparison-table .column-action {
   background: #f8f9fa;
   vertical-align: middle; }
+
+.more-info {
+  color: #6a717f;
+  font-size: 12px;
+  font-size: 1.2rem; }
+  .more-info + .uni-fees-title {
+    margin-top: 10px; }
+
+.uni-logo {
+  float: left;
+  max-width: 100px;
+  max-height: 50px;
+  margin-right: 10px; }
+.uni-info {
+  padding-left: 110px; }
+  .uni-info-title {
+    margin: 0;
+    font-weight: bold; }
+.uni-credits-title {
+  margin: 0; }
+.uni-fees-title {
+  margin: 0; }

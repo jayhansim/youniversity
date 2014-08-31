@@ -24,6 +24,9 @@
   height: 50px;
   line-height: 50px;
   color: $color-reverse-lightblue;
+  box-shadow: 0 1px 3px rgba(0,0,0,.2);
+  position: relative;
+  z-index: 1;
 
   [role="navigation"] {
     position: relative;
