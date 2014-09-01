@@ -1,0 +1,50 @@
+.section-title {
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: -1px; }
+.section-subtitle {
+  color: #6a717f; }
+
+.what-we-do {
+  padding: 30px 0;
+  text-align: center; }
+  .what-we-do-list {
+    margin-top: 20px; }
+    .what-we-do-list p {
+      color: #6a717f; }
+  .what-we-do-icon-1 {
+    background-position: 0 0; }
+  .what-we-do-icon-2 {
+    background-position: -140px 0; }
+  .what-we-do-icon-3 {
+    background-position: -280px 0; }
+  .what-we-do-icon-4 {
+    background-position: -420px 0; }
+
+[class*="what-we-do-icon-"] {
+  background-image: url(../img/what-we-do-icons.png);
+  height: 140px;
+  width: 140px;
+  -webkit-background-size: 560px 140px;
+  background-size: 560px 140px;
+  margin: 0 auto 20px; }
+
+.why {
+  background: #29aae1 url(../img/bg-sky.jpg) center;
+  color: #fff;
+  text-align: center; }
+  .why .container {
+    padding: 60px 0;
+    background: url(../img/home-why-human.png) center 50px no-repeat;
+    background-size: 317px 216px; }
+  .why .section-title {
+    margin-top: 0; }
+  .why q {
+    font-weight: 300;
+    font-size: 20px;
+    font-size: 2rem;
+    margin-top: 30px;
+    display: inline-block; }
+
+.articles {
+  padding: 30px 0; }

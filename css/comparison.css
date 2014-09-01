@@ -140,6 +140,8 @@
 .comparison-table .column-action {
   background: #f8f9fa;
   vertical-align: middle; }
+.comparison-table h5 {
+  font-weight: 400; }
 
 .more-info {
   color: #6a717f;

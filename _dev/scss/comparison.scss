@@ -210,6 +210,10 @@ $color-tab-selected: #ffe87a;
     background: lighten($color-lightgrey,3);
     vertical-align: middle;
   }
+
+  h5 {
+    font-weight: 400;
+  }
 }
 
 .more-info {

@@ -7,3 +7,11 @@
     border-bottom: none !important;
   }
 }
+
+$tablecol: 12;
+
+@for $i from 1 through $tablecol {
+  .w-#{$i} {
+    width: percentage($i/$tablecol);
+  }
+}

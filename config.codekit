@@ -85,6 +85,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 1
 		},
+	"\/_dev\/kit\/index.kit": {
+		"fileType": 2048,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/_dev\/kit\/index.kit",
+		"outputAbbreviatedPath": "\/index.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 1
+		},
 	"\/_dev\/scss\/_footer.scss": {
 		"createSourceMap": 0,
 		"debugStyle": 0,
@@ -142,6 +151,22 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_dev\/scss\/_grid.scss",
 		"outputAbbreviatedPath": "\/_dev\/css\/_grid.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"useLibsass": 0
+		},
+	"\/_dev\/scss\/_misc.scss": {
+		"createSourceMap": 0,
+		"debugStyle": 0,
+		"decimalPrecision": 5,
+		"fileType": 4,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/_dev\/scss\/_misc.scss",
+		"outputAbbreviatedPath": "\/_dev\/css\/_misc.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
@@ -245,6 +270,22 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
+	"\/_dev\/scss\/homepage.scss": {
+		"createSourceMap": 0,
+		"debugStyle": 0,
+		"decimalPrecision": 5,
+		"fileType": 4,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/_dev\/scss\/homepage.scss",
+		"outputAbbreviatedPath": "\/css\/homepage.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 1,
+		"outputStyle": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"useLibsass": 0
+		},
 	"\/comparison.html": {
 		"fileType": 8192,
 		"ignore": 1,
@@ -280,6 +321,26 @@
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
+		},
+	"\/css\/homepage.css": {
+		"fileType": 16,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/css\/homepage.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/img\/bg-sky.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 87583,
+		"inputAbbreviatedPath": "\/img\/bg-sky.jpg",
+		"outputAbbreviatedPath": "\/img\/bg-sky.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
 		},
 	"\/img\/cheatsheet-signup-bg.jpg": {
 		"fileType": 16384,
@@ -358,6 +419,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/home-why-human.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 74744,
+		"inputAbbreviatedPath": "\/img\/home-why-human.png",
+		"outputAbbreviatedPath": "\/img\/home-why-human.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/nav-arrowdown.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -413,6 +485,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/what-we-do-icons.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 45977,
+		"inputAbbreviatedPath": "\/img\/what-we-do-icons.png",
+		"outputAbbreviatedPath": "\/img\/what-we-do-icons.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/youniversity-logo.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -426,7 +509,7 @@
 		},
 	"\/index.html": {
 		"fileType": 8192,
-		"ignore": 0,
+		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/index.html",
 		"outputAbbreviatedPath": "No Output Path",

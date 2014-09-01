@@ -75,8 +75,8 @@
             <table class="table comparison-table">
               <thead>
                 <tr>
-                  <th>University</th>
-                  <th>Entry Requirements</th>
+                  <th class="w-3">University</th>
+                  <th class="w-2">Entry Requirements</th>
                   <th>Ratings</th>
                   <th>Tuition Fees</th>
                   <th>Intake</th>
@@ -181,7 +181,7 @@
                   <td>
                     <h4 class="uni-fees-title">RM30,000</h4>
                     <span class="more-info">3 subjects</span>
-                    <h4 class="uni-fees-title">RM50,000</h4>
+                    <h4 class="uni-fees-title h5">RM50,000</h4>
                     <span class="more-info">5 subjects</span>
                   </td>
                   <td>
@@ -292,7 +292,7 @@
                   <td>
                     <h4 class="uni-fees-title">RM30,000</h4>
                     <span class="more-info">3 subjects</span>
-                    <h4 class="uni-fees-title">RM50,000</h4>
+                    <h4 class="uni-fees-title h5">RM50,000</h4>
                     <span class="more-info">5 subjects</span>
                   </td>
                   <td>
@@ -376,7 +376,7 @@ $(document).ready(function(){
 
   // columnize the FAQ and 3 Things block
   $('.important-container').columnize({ width: 400 });
-  $('.faq-container').columnize({ columns: 3 });
+  $('.faq-container').columnize({ width: 400 });
 
   // Making the tab works
   var href,
