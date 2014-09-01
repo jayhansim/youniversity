@@ -20,6 +20,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/_dev\/inc\/_footer-bottom.kit": {
+		"fileType": 2048,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/_dev\/inc\/_footer-bottom.kit",
+		"outputAbbreviatedPath": "\/_dev\/inc\/_footer-bottom.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/_dev\/inc\/_footer.kit": {
 		"fileType": 2048,
 		"ignore": 1,
@@ -55,6 +64,17 @@
 		"outputAbbreviatedPath": "\/_dev\/inc\/_top.html",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
+		},
+	"\/_dev\/js\/jquery.columnizer.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/_dev\/js\/jquery.columnizer.js",
+		"outputAbbreviatedPath": "\/js\/jquery.columnizer.min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 1,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 0
 		},
 	"\/_dev\/kit\/comparison.kit": {
 		"fileType": 2048,
@@ -316,6 +336,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/comparison-tab-icons.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 13389,
+		"inputAbbreviatedPath": "\/img\/comparison-tab-icons.png",
+		"outputAbbreviatedPath": "\/img\/comparison-tab-icons.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/dotted-underline.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -401,6 +432,17 @@
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
+		},
+	"\/js\/jquery.columnizer.min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/js\/jquery.columnizer.min.js",
+		"outputAbbreviatedPath": "\/js\/min\/jquery.columnizer.min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
 		},
 	"\/js\/main.js": {
 		"fileType": 64,

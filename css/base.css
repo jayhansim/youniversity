@@ -80,7 +80,7 @@ select.form-control {
   color: #b6e2ff;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   position: relative;
-  z-index: 1; }
+  z-index: 3; }
   .nav [role="navigation"] {
     position: relative; }
   .nav a {
@@ -131,14 +131,14 @@ select.form-control {
   opacity: 0;
   visibility: hidden;
   position: absolute;
-  z-index: 10;
   background: #fff;
   box-shadow: 0 1px 10px rgba(0, 0, 0, 0.5);
   width: 100%;
   line-height: 1.42857;
   -webkit-transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
   -moz-transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
-  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out; }
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  z-index: 100; }
   .nav-main:hover .nav-dropdown {
     opacity: 1;
     visibility: visible; }
@@ -182,6 +182,15 @@ select.form-control {
           font-weight: 700;
           background: #edf0f6; }
 
+@media (max-width: 767px) {
+  .nav-popular {
+    display: none; }
+
+  .nav-dropdown-column {
+    display: block; }
+
+  .nav-dropdown-menu {
+    border-top: 1px solid #dce2ee; } }
 .cheatsheet-signup {
   background: #29aae1 url(../img/cheatsheet-signup-bg.jpg);
   -webkit-background-size: 643.5px 397.5px;

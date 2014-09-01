@@ -151,7 +151,7 @@
 <div id="comparison-main" class="comparison-main" role="main">
   <div class="container">
     <div class="row">
-      <div class="col-xs-12">
+      <div id="comparison-tabs-content" class="col-xs-12">
         <div id="compare">
           <form action="" class="form-inline comparison-filters">
             <!-- filter -->
@@ -427,48 +427,48 @@
         </div>
         <div id="important">
           <div class="important-container">
-            <div class="important-block">
-              <h3>Title</h3>
+            <div class="important-block dontsplit">
+              <h4>Title</h4>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam fugiat eius pariatur, sunt qui dolorem. Expedita quod perferendis, vero, inventore rem unde numquam eos, ipsa, officia dignissimos aut deserunt provident.</p>
             </div>
-            <div class="important-block">
-              <h3>Title</h3>
+            <div class="important-block dontsplit">
+              <h4>Title</h4>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam fugiat eius pariatur</p>
             </div>
-            <div class="important-block">
-              <h3>Title</h3>
+            <div class="important-block dontsplit">
+              <h4>Title</h4>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam fugiat eius pariatur, sunt qui dolorem. Expedita quod perferendis, vero, inventore rem unde numquam eos, ipsa, officia dignissimos aut deserunt provident. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis assumenda porro asperiores ab, molestias cupiditate! Distinctio, vel magnam recusandae quae optio, enim qui atque sunt, officia, error quo suscipit dolores.</p>
             </div>
-            <div class="important-block">
-              <h3>Title</h3>
+            <div class="important-block dontsplit">
+              <h4>Title</h4>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam fugiat eius pariatur, sunt qui dolorem. Expedita quod perferendis, vero, inventore rem unde numquam eos.</p>
             </div>
-            <div class="important-block">
-              <h3>Title</h3>
+            <div class="important-block dontsplit">
+              <h4>Title</h4>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam fugiat eius pariatur, sunt qui dolorem. Expedita quod perferendis, vero, inventore rem unde numquam eos, ipsa, officia dignissimos aut deserunt provident.</p>
             </div>
           </div>
         </div>
         <div id="faq">
           <div class="faq-container">
-            <div class="faq-block">
-              <h3>Title</h3>
+            <div class="faq-block dontsplit">
+              <h4>Title</h4>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam fugiat eius pariatur, sunt qui dolorem. Expedita quod perferendis, vero, inventore rem unde numquam eos, ipsa, officia dignissimos aut deserunt provident.</p>
             </div>
-            <div class="faq-block">
-              <h3>Title</h3>
+            <div class="faq-block dontsplit">
+              <h4>Title</h4>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam fugiat eius pariatur</p>
             </div>
-            <div class="faq-block">
-              <h3>Title</h3>
+            <div class="faq-block dontsplit">
+              <h4>Title</h4>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam fugiat eius pariatur, sunt qui dolorem. Expedita quod perferendis, vero, inventore rem unde numquam eos, ipsa, officia dignissimos aut deserunt provident. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis assumenda porro asperiores ab, molestias cupiditate! Distinctio, vel magnam recusandae quae optio, enim qui atque sunt, officia, error quo suscipit dolores.</p>
             </div>
-            <div class="faq-block">
-              <h3>Title</h3>
+            <div class="faq-block dontsplit">
+              <h4>Title</h4>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam fugiat eius pariatur, sunt qui dolorem. Expedita quod perferendis, vero, inventore rem unde numquam eos.</p>
             </div>
-            <div class="faq-block">
-              <h3>Title</h3>
+            <div class="faq-block dontsplit">
+              <h4>Title</h4>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam fugiat eius pariatur, sunt qui dolorem. Expedita quod perferendis, vero, inventore rem unde numquam eos, ipsa, officia dignissimos aut deserunt provident.</p>
             </div>
           </div>
@@ -572,5 +572,45 @@
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
   <script src="js/main.js"></script>
-  </body>
+
+
+<script src="js/jquery.columnizer.min.js"></script>
+<script>
+$(document).ready(function(){
+
+  // columnize the FAQ and 3 Things block
+  $('.important-container').columnize({ width: 400 });
+  $('.faq-container').columnize({ columns: 3 });
+
+  // Making the tab works
+  var href,
+      tabsContent = $('#comparison-tabs-content').children();
+
+  tabsContent.not(':first').hide();
+
+  $('#comparison-tabs li').on('click', 'a', function(e){
+    $(this).parent('li').addClass('selected').siblings().removeClass('selected');
+    href = $(this).attr('href');
+    document.location.hash = href.replace(/^.*#/,'/');
+    tabsContent.hide().siblings(href).show();
+    e.preventDefault();
+  });
+
+  // checking the hash change event
+  $(window).on('hashchange', function(){
+
+    if(document.location.hash == '') {
+      $('#comparison-tabs').find('a[href="#compare"]').click();
+    } else {
+      var target = $('#comparison-tabs').find('a[href="' + document.location.hash.replace(/\//, '') + '"]');
+      target.click();
+    }
+
+  }).trigger('hashchange');
+
+});
+</script>
+
+
+</body>
 </html>

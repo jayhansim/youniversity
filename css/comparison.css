@@ -51,7 +51,8 @@
     .comparison-header-tabs li {
       display: inline-block;
       width: 33%;
-      margin-left: .5%; }
+      margin-left: .5%;
+      vertical-align: bottom; }
       .comparison-header-tabs li:first-child {
         margin-left: 0; }
       .comparison-header-tabs li a {
@@ -62,7 +63,10 @@
         color: #9eaebc;
         border-top: 1px solid transparent;
         font-weight: 700;
-        position: relative; }
+        position: relative;
+        -webkit-transition: none;
+        -moz-transition: none;
+        transition: none; }
         .comparison-header-tabs li a:hover {
           background-color: #3b5163; }
       .comparison-header-tabs li.selected a {
@@ -82,6 +86,31 @@
           left: 50%;
           margin-left: -10px;
           z-index: 2; }
+      .comparison-header-tabs li.selected .icon-comparison {
+        background-position: 0 -26px; }
+      .comparison-header-tabs li.selected .icon-3things {
+        background-position: -25px -26px; }
+      .comparison-header-tabs li.selected .icon-faq {
+        background-position: -63px -26px; }
+    .comparison-header-tabs [class*="icon-"] {
+      background: url(../img/comparison-tab-icons.png) no-repeat;
+      -webkit-background-size: 81px 53px;
+      background-size: 81px 53px;
+      display: inline-block;
+      vertical-align: middle;
+      position: relative;
+      left: -5px;
+      height: 26px; }
+    .comparison-header-tabs .icon-comparison {
+      width: 21px;
+      background-position: 0 0;
+      top: -2px; }
+    .comparison-header-tabs .icon-3things {
+      width: 33px;
+      background-position: -25px 0; }
+    .comparison-header-tabs .icon-faq {
+      width: 16px;
+      background-position: -63px 0; }
 
 .comparison-main {
   padding: 20px 0 30px; }
@@ -97,17 +126,17 @@
 
 .comparison-table thead > tr > th {
   padding-top: 30px;
-  padding-bottom: 30px;
-  text-align: center; }
+  padding-bottom: 30px; }
+  .comparison-table thead > tr > th:first-child, .comparison-table thead > tr > th:nth-child(3), .comparison-table thead > tr > th:nth-child(6), .comparison-table thead > tr > th:last-child {
+    text-align: center; }
 .comparison-table tbody > tr td {
-  text-align: center;
   border-top: none;
   border-bottom: 1px solid #dce2ee;
   vertical-align: middle;
   padding-top: 15px;
   padding-bottom: 15px; }
-  .comparison-table tbody > tr td:first-child {
-    text-align: left; }
+  .comparison-table tbody > tr td:last-child, .comparison-table tbody > tr td:nth-child(3), .comparison-table tbody > tr td:nth-child(6) {
+    text-align: center; }
 .comparison-table .column-action {
   background: #f8f9fa;
   vertical-align: middle; }
@@ -142,7 +171,8 @@
   background-size: 90px 102px;
   display: inline-block;
   color: #fff;
-  cursor: pointer; }
+  cursor: pointer;
+  text-align: center; }
   .scorecard.scorecard-best {
     background-image: url(../img/comparison-rating-best.png); }
   .scorecard-rating {
@@ -250,3 +280,45 @@
     border-radius: 0 0 3px 3px; }
     .scorecard-best .scorecard-comment {
       background-color: #28b48e; }
+
+.important-container, .faq-container {
+  margin: 20px -5px 0; }
+
+.column {
+  padding: 0 5px; }
+
+.important-block, .faq-block {
+  background: #0071bc;
+  color: #fff;
+  padding: 15px;
+  margin-bottom: 10px;
+  position: relative;
+  font-size: 13px;
+  font-size: 1.3rem; }
+  .important-block:after, .important-block:before, .faq-block:after, .faq-block:before {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    content: '';
+    display: block;
+    border: 10px solid; }
+  .important-block:before, .faq-block:before {
+    right: 20px;
+    border-color: transparent rgba(0, 0, 0, 0.05) rgba(0, 0, 0, 0.05) transparent; }
+  .important-block > h4, .faq-block > h4 {
+    margin-top: 0;
+    font-weight: 700; }
+  .important-block > *:last-child, .faq-block > *:last-child {
+    margin-bottom: 0; }
+
+.important-block:after {
+  border-color: #005289 white white #005289; }
+
+.faq-block {
+  background-color: #29aae1; }
+  .faq-block:after {
+    border-color: #1a8cbd white white #1a8cbd; }
+
+@media (min-width: 1200px) {
+  .column {
+    width: 33.33% !important; } }
