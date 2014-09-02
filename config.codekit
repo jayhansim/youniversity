@@ -441,6 +441,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/slider-1.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 64559,
+		"inputAbbreviatedPath": "\/img\/slider-1.jpg",
+		"outputAbbreviatedPath": "\/img\/slider-1.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/star-empty.png": {
 		"fileType": 32768,
 		"ignore": 0,

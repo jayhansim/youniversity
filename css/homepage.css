@@ -1,3 +1,25 @@
+.slider {
+  position: relative;
+  padding-top: 30%;
+  min-height: 350px; }
+  .slider-content {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%); }
+  .slider-1 {
+    background: url(../img/slider-1.jpg);
+    background-size: cover; }
+
+.home-title {
+  color: #0071bc;
+  margin-top: 0;
+  line-height: 1.42857; }
+
 .section-title {
   text-transform: uppercase;
   font-weight: 700;
@@ -6,7 +28,7 @@
   color: #6a717f; }
 
 .what-we-do {
-  padding: 30px 0;
+  padding: 60px 0;
   text-align: center; }
   .what-we-do-list {
     margin-top: 20px; }
@@ -34,17 +56,62 @@
   color: #fff;
   text-align: center; }
   .why .container {
-    padding: 60px 0;
-    background: url(../img/home-why-human.png) center 50px no-repeat;
+    padding: 100px 0;
+    background: url(../img/home-why-human.png) center bottom no-repeat;
     background-size: 317px 216px; }
   .why .section-title {
-    margin-top: 0; }
+    margin-top: 0;
+    opacity: .95;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.25); }
   .why q {
     font-weight: 300;
     font-size: 20px;
     font-size: 2rem;
-    margin-top: 30px;
-    display: inline-block; }
+    display: inline-block;
+    opacity: .95;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.25); }
 
 .articles {
-  padding: 30px 0; }
+  padding: 60px 0; }
+  .articles-container {
+    margin: 30px 0; }
+
+.article a {
+  display: block;
+  position: relative;
+  color: #fff; }
+  .article a:hover .article-title {
+    color: #29aae1; }
+.article time {
+  position: absolute;
+  top: 0;
+  left: -6px;
+  padding: 6px 12px;
+  background: #0071bc;
+  font-size: 11px;
+  font-size: 1.1rem; }
+  .article time:before {
+    position: absolute;
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    left: 0;
+    top: 100%;
+    border: 3px solid;
+    border-color: #0062a3 #0062a3 transparent transparent; }
+.article-detail {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px;
+  background: rgba(46, 49, 55, 0.75); }
+.article-title {
+  margin: 0;
+  font-size: 18px;
+  font-size: 1.8rem;
+  -webkit-transition: color 0.1s linear;
+  -moz-transition: color 0.1s linear;
+  transition: color 0.1s linear;
+  font-weight: 400; }
