@@ -230,6 +230,9 @@ select.form-control {
 
   .nav-dropdown-menu {
     border-top: 1px solid #dce2ee; } }
+@media (max-width: 479px) {
+  .nav-cheatsheet {
+    display: none; } }
 .cheatsheet-signup {
   background: #29aae1 url(../img/cheatsheet-signup-bg.jpg);
   -webkit-background-size: 643.5px 397.5px;
