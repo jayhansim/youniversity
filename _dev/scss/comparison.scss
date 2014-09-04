@@ -161,12 +161,17 @@ $color-tab-selected: #ffe87a;
 .comparison-filters {
   margin: 20px 0;
 
+  &-title {
+    font-weight: 700;
+    margin-right: 5px;
+    @include font-size(1.2);
+  }
+
   select.form-control {
     @include font-size(1.2);
-    color: $color-lighter;
     width: 200px;
     padding-left: 20px;
-
+    box-shadow: 0 1px 1px rgba(0,0,0,.1);
   }
 }
 
@@ -298,6 +303,8 @@ $color-tab-selected: #ffe87a;
       font-weight: 700;
       @include font-size(1.8);
       line-height: 20px;
+      position: relative;
+      left: 0.5px;
     }
   }
 

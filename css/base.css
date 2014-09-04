@@ -20,11 +20,12 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   margin: 0 auto;
   float: none; }
 
-.form-control, .btn {
+.form-control:not(select), .btn {
   border: none; }
 
 .form-control {
-  box-shadow: none; }
+  box-shadow: none;
+  border-color: #cbd4e6; }
 
 .btn {
   padding-top: 7px;
@@ -47,7 +48,8 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   margin-left: 0; }
 
 select.form-control {
-  background: #eff1f4; }
+  background-image: -webkit-linear-gradient(white 0, #eff1f4 75%);
+  background-image: linear-gradient(to   , #eff1f4 75%); }
 
 .table {
   border-top: 2px solid #29aae1; }

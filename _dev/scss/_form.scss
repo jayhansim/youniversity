@@ -1,10 +1,11 @@
 
-.form-control, .btn {
+.form-control:not(select), .btn {
   border: none;
 }
 
 .form-control {
   box-shadow: none;
+  border-color: darken($border-color,5);
 }
 
 .btn {
@@ -36,5 +37,6 @@
 }
 
 select.form-control {
-  background: $color-lightgrey;
+  @include background-image(linear-gradient(#fff 0, $color-lightgrey 75%));
+  //background: $color-lightgrey;
 }

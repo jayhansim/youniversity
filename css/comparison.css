@@ -117,12 +117,17 @@
 
 .comparison-filters {
   margin: 20px 0; }
+  .comparison-filters-title {
+    font-weight: 700;
+    margin-right: 5px;
+    font-size: 12px;
+    font-size: 1.2rem; }
   .comparison-filters select.form-control {
     font-size: 12px;
     font-size: 1.2rem;
-    color: #6a717f;
     width: 200px;
-    padding-left: 20px; }
+    padding-left: 20px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1); }
 
 .comparison-table thead > tr > th {
   padding-top: 30px;
@@ -200,7 +205,9 @@
       font-weight: 700;
       font-size: 18px;
       font-size: 1.8rem;
-      line-height: 20px; }
+      line-height: 20px;
+      position: relative;
+      left: 0.5px; }
   .scorecard:hover .scorecard-content {
     opacity: 1;
     visibility: visible; }
