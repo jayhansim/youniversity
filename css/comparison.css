@@ -131,17 +131,27 @@
 
 .comparison-table thead > tr > th {
   padding-top: 30px;
-  padding-bottom: 30px; }
-  .comparison-table thead > tr > th:first-child, .comparison-table thead > tr > th:nth-child(3), .comparison-table thead > tr > th:nth-child(6), .comparison-table thead > tr > th:last-child {
-    text-align: center; }
+  padding-bottom: 30px;
+  text-align: center; }
+.comparison-table tbody > tr:hover td {
+  background: #f8f9fa; }
+.comparison-table tbody > tr:hover .column-action {
+  background: #eff1f4; }
 .comparison-table tbody > tr td {
   border-top: none;
   border-bottom: 1px solid #dce2ee;
   vertical-align: middle;
   padding-top: 15px;
-  padding-bottom: 15px; }
-  .comparison-table tbody > tr td:last-child, .comparison-table tbody > tr td:nth-child(3), .comparison-table tbody > tr td:nth-child(6) {
-    text-align: center; }
+  padding-bottom: 15px;
+  text-align: center;
+  -webkit-transition: 0.1s background-color linear;
+  -moz-transition: 0.1s background-color linear;
+  transition: 0.1s background-color linear; }
+  .comparison-table tbody > tr td:first-child {
+    text-align: left;
+    width: 20%; }
+  .comparison-table tbody > tr td:nth-child(2) {
+    width: 18%; }
 .comparison-table .column-action {
   background: #f8f9fa;
   vertical-align: middle; }
@@ -169,6 +179,25 @@
   margin: 0; }
 .uni-fees-title {
   margin: 0; }
+
+.tablesorter th {
+  cursor: pointer;
+  background: #eff1f4 url(../img/tablesorter-sort-inactive.png) center bottom no-repeat;
+  background-size: 10px 10px; }
+  .tablesorter th.sorter-false {
+    background-image: none;
+    cursor: inherit; }
+  .tablesorter th.primary {
+    background-color: #29aae1;
+    color: #fff; }
+  .tablesorter th.tablesorter-headerAsc {
+    background-image: url(../img/tablesorter-asc.png); }
+  .tablesorter th.tablesorter-headerDesc {
+    background-image: url(../img/tablesorter-dsc.png); }
+.tablesorter td.primary {
+  background-color: rgba(41, 170, 225, 0.1); }
+.tablesorter tr:hover td.primary {
+  background-color: rgba(41, 170, 225, 0.2); }
 
 .scorecard {
   background: url(../img/comparison-rating-good.png) no-repeat;
@@ -205,9 +234,7 @@
       font-weight: 700;
       font-size: 18px;
       font-size: 1.8rem;
-      line-height: 20px;
-      position: relative;
-      left: 0.5px; }
+      line-height: 20px; }
   .scorecard:hover .scorecard-content {
     opacity: 1;
     visibility: visible; }
@@ -299,18 +326,28 @@
 .important-block, .faq-block {
   background: #0071bc;
   color: #fff;
-  padding: 15px;
+  padding: 20px;
   margin-bottom: 10px;
   position: relative;
   font-size: 13px;
-  font-size: 1.3rem; }
+  font-size: 1.3rem;
+  -webkit-transition: background-color 0.1s linear;
+  -moz-transition: background-color 0.1s linear;
+  transition: background-color 0.1s linear; }
+  .important-block:hover, .faq-block:hover {
+    background-color: #4a667d; }
+    .important-block:hover:after, .faq-block:hover:after {
+      border-color: #41596d white white #41596d; }
   .important-block:after, .important-block:before, .faq-block:after, .faq-block:before {
     position: absolute;
     bottom: 0;
     right: 0;
     content: '';
     display: block;
-    border: 10px solid; }
+    border: 10px solid;
+    -webkit-transition: border-color 0.1s linear;
+    -moz-transition: border-color 0.1s linear;
+    transition: border-color 0.1s linear; }
   .important-block:before, .faq-block:before {
     right: 20px;
     border-color: transparent rgba(0, 0, 0, 0.05) rgba(0, 0, 0, 0.05) transparent; }

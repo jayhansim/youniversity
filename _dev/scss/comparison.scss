@@ -181,11 +181,11 @@ $color-tab-selected: #ffe87a;
       >th {
         padding-top: 30px;
         padding-bottom: 30px;
-        //text-align: center;
+        text-align: center;
 
-        &:first-child, &:nth-child(3), &:nth-child(6), &:last-child {
-          text-align: center;
-        }
+        // &:first-child, &:nth-child(3), &:nth-child(6), &:last-child {
+        //   text-align: center;
+        // }
       }
     }
   }
@@ -194,6 +194,16 @@ $color-tab-selected: #ffe87a;
 
     > tr {
 
+      &:hover {
+        td {
+          background: lighten($color-lightgrey,3);
+        }
+
+        .column-action {
+          background: $color-lightgrey;
+        }
+      }
+
       td {
         //text-align: center;
         border-top: none;
@@ -201,9 +211,16 @@ $color-tab-selected: #ffe87a;
         vertical-align: middle;
         padding-top: 15px;
         padding-bottom: 15px;
+        text-align: center;
+        @include transition(0.1s background-color linear);
 
-        &:last-child, &:nth-child(3), &:nth-child(6) {
-          text-align: center;
+        &:first-child {
+          text-align: left;
+          width: 20%;
+        }
+
+        &:nth-child(2) {
+          width: 18%;
         }
 
 
@@ -215,6 +232,7 @@ $color-tab-selected: #ffe87a;
     background: lighten($color-lightgrey,3);
     vertical-align: middle;
   }
+
 
   h5 {
     font-weight: 400;
@@ -260,6 +278,58 @@ $color-tab-selected: #ffe87a;
   }
 }
 
+
+
+
+//
+.tablesorter {
+  th {
+    cursor: pointer;
+    background: $color-lightgrey url(../img/tablesorter-sort-inactive.png) center bottom no-repeat;
+    background-size: 10px 10px;
+
+    &.sorter-false {
+      background-image: none;
+      cursor: inherit;
+    }
+
+    // &:hover {
+    //   background: darken($color-lightgrey,5);
+    // }
+
+    &.primary {
+      background-color: $brand-lightblue;
+      color: #fff;
+    }
+
+    &.tablesorter-headerAsc {
+      background-image: url(../img/tablesorter-asc.png);
+    }
+
+    &.tablesorter-headerDesc {
+      background-image: url(../img/tablesorter-dsc.png);
+    }
+
+
+  }
+
+  td {
+    &.primary {
+      background-color: rgba($brand-lightblue,.1);
+    }
+  }
+
+  tr:hover {
+    td.primary {
+      background-color: rgba($brand-lightblue,.2);
+    }
+  }
+}
+
+
+
+
+
 // scorecard
 
 .scorecard {
@@ -303,8 +373,8 @@ $color-tab-selected: #ffe87a;
       font-weight: 700;
       @include font-size(1.8);
       line-height: 20px;
-      position: relative;
-      left: 0.5px;
+      // position: relative;
+      // left: 0.5px;
     }
   }
 
@@ -418,6 +488,8 @@ $color-tab-selected: #ffe87a;
 }
 
 
+
+
 // faq and 3 important things
 .important-container, .faq-container {
   margin: 20px -5px 0;
@@ -429,10 +501,19 @@ $color-tab-selected: #ffe87a;
 .important-block, .faq-block {
   background: $brand-darkblue;
   color: #fff;
-  padding: 15px;
+  padding: 20px;
   margin-bottom: 10px;
   position: relative;
   @include font-size(1.3);
+  @include transition(background-color 0.1s linear);
+
+  &:hover {
+    background-color: $color-tab;
+
+    &:after {
+      border-color: darken($color-tab,5) #fff #fff darken($color-tab,5);
+    }
+  }
 
   &:after, &:before {
     position: absolute;
@@ -442,6 +523,7 @@ $color-tab-selected: #ffe87a;
     content: '';
     display: block;
     border: 10px solid;
+    @include transition(border-color 0.1s linear);
   }
 
   &:before {
