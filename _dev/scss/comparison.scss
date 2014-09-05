@@ -499,16 +499,26 @@ $color-tab-selected: #ffe87a;
 }
 
 .important-block, .faq-block {
-  background: $brand-darkblue;
-  color: #fff;
+  background: lighten($color-tab-selected,20);
+  color: $color-lighter;
   padding: 20px;
   margin-bottom: 10px;
   position: relative;
   @include font-size(1.3);
-  @include transition(background-color 0.1s linear);
+  @include transition(all 0.1s linear);
+
+  h4 {
+    color: $brand-darkblue;
+    @include transition(all 0.1s linear);
+  }
 
   &:hover {
     background-color: $color-tab;
+    color: #fff;
+
+    h4 {
+      color: $brand-lightblue;
+    }
 
     &:after {
       border-color: darken($color-tab,5) #fff #fff darken($color-tab,5);
@@ -528,7 +538,7 @@ $color-tab-selected: #ffe87a;
 
   &:before {
     right: 20px;
-    border-color: transparent rgba(0,0,0,.05) rgba(0,0,0,.05) transparent;
+    border-color: transparent rgba(0,0,0,.02) rgba(0,0,0,.02) transparent;
   }
 
   > h4 {
@@ -543,12 +553,17 @@ $color-tab-selected: #ffe87a;
 
 .important-block {
   &:after {
-    border-color: darken($brand-darkblue,10) #fff #fff darken($brand-darkblue,10);
+    border-color: $color-tab-selected #fff #fff $color-tab-selected;
   }
 }
 
 .faq-block {
   background-color: $brand-lightblue;
+  color: #fff;
+
+  h4 {
+    color: #fff;
+  }
 
   &:after {
     border-color: darken($brand-lightblue,10) #fff #fff darken($brand-lightblue,10);
