@@ -1,0 +1,54 @@
+@import "bourbon";
+
+// local variables and mixins
+@import "_var";
+@import "_mixin";
+
+
+
+// header
+.cheatsheet {
+
+  &-header {
+    background: url(../img/cheatsheets-header-items.png) center no-repeat,
+                url(../img/cheatsheets-header-bg.jpg);
+    background-size: 1600px 401px, 171px 169px;
+    text-align: center;
+    padding: 30px 0;
+
+    &-title {
+      font-family: 'Amatic SC', 'Open Sans' cursive;
+      @include font-size(7.5);
+      color: #fff;
+      background: url(../img/cheatsheets-header-title.png) no-repeat;
+      @include size(423px 100px);
+      @include background-size(423, 100);
+      display: inline-block;
+      text-align: center;
+      line-height: 90px;
+    }
+
+    &-subtitle {
+      font-weight: 700;
+      color: $color-lighter;
+      text-transform: uppercase;
+      display: block;
+      margin-top: -10px;
+    }
+  }
+
+
+  &-content {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  &-featured {
+    margin-bottom: 30px;
+  }
+}
+
+.section-title {
+  color: $color-lighter;
+  text-transform: uppercase;
+}
