@@ -85,6 +85,15 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 0
 		},
+	"\/_dev\/kit\/cheatsheet-single.kit": {
+		"fileType": 2048,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/_dev\/kit\/cheatsheet-single.kit",
+		"outputAbbreviatedPath": "\/cheatsheet-single.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 1
+		},
 	"\/_dev\/kit\/cheatsheet.kit": {
 		"fileType": 2048,
 		"ignore": 0,
@@ -320,6 +329,15 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
+	"\/cheatsheet-single.html": {
+		"fileType": 8192,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/cheatsheet-single.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/cheatsheet.html": {
 		"fileType": 8192,
 		"ignore": 1,
@@ -383,6 +401,17 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/img\/avatar.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 54545,
+		"inputAbbreviatedPath": "\/img\/avatar.jpg",
+		"outputAbbreviatedPath": "\/img\/avatar.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/bg-sky.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -390,6 +419,28 @@
 		"initialSize": 87583,
 		"inputAbbreviatedPath": "\/img\/bg-sky.jpg",
 		"outputAbbreviatedPath": "\/img\/bg-sky.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/cheatsheet-article-featured.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 409238,
+		"inputAbbreviatedPath": "\/img\/cheatsheet-article-featured.jpg",
+		"outputAbbreviatedPath": "\/img\/cheatsheet-article-featured.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/cheatsheet-article.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 132893,
+		"inputAbbreviatedPath": "\/img\/cheatsheet-article.jpg",
+		"outputAbbreviatedPath": "\/img\/cheatsheet-article.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -489,6 +540,17 @@
 		"initialSize": 13389,
 		"inputAbbreviatedPath": "\/img\/comparison-tab-icons.png",
 		"outputAbbreviatedPath": "\/img\/comparison-tab-icons.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/dotted-underline-darkblue.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 4171,
+		"inputAbbreviatedPath": "\/img\/dotted-underline-darkblue.png",
+		"outputAbbreviatedPath": "\/img\/dotted-underline-darkblue.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0

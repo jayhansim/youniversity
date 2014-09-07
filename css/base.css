@@ -1,5 +1,5 @@
 body {
-  font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif; }
+  font-family: "Proxima Nova", "Helvetica Neue", Arial, sans-serif; }
 
 @media (min-width: 1200px) {
   .container {
@@ -114,6 +114,9 @@ select.form-control {
       width: 0;
       height: 100%; }
 
+@media (max-width: 479px) {
+  .top {
+    text-align: center; } }
 .nav {
   background: #0071bc;
   height: 50px;
@@ -168,6 +171,12 @@ select.form-control {
     border: 1px solid #0062a3;
     border-width: 0 1px; }
 
+@media (max-width: 479px) {
+  .nav-main {
+    float: none; }
+    .nav-main > a {
+      display: block;
+      text-align: center; } }
 .nav-dropdown {
   opacity: 0;
   visibility: hidden;
@@ -262,7 +271,7 @@ select.form-control {
     display: none;
     height: 137px;
     width: 230px;
-    background: url(../img/cheatsheet-signup-yuno.png) no-repeat;
+    background: url(../img/cheatsheets-signup-yuno.png) no-repeat;
     -webkit-background-size: 230px 137px;
     background-size: 230px 137px;
     right: 0;

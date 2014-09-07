@@ -16,6 +16,12 @@
   }
 }
 
+@media (max-width: 479px) {
+  .top {
+    text-align: center;
+  }
+}
+
 
 
 // nav bar
@@ -95,6 +101,17 @@
     padding: 0 20px;
     border: 1px solid darken($brand-darkblue, 5);
     border-width: 0 1px;
+  }
+}
+
+@media (max-width: 479px) {
+  .nav-main {
+    float: none;
+
+    > a {
+      display: block;
+      text-align: center;
+    }
   }
 }
 
