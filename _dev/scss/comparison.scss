@@ -488,6 +488,48 @@ $color-tab-selected: #ffe87a;
 }
 
 
+// modal
+#modal {
+  display: none;
+}
+
+.more {
+  &-wrapper {
+    background: #fff;
+    border-radius: 6px;
+  }
+
+  &-header {
+    @extend .comparison-header;
+    padding: 20px;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+
+    &-more {
+      @extend .comparison-header-label;
+    }
+
+    &-title {
+      margin: 0;
+      clear: left;
+      font-family: $amatic;
+      text-shadow: 2px 2px 0 rgba(#fff,.3);
+      background: url(../img/dotted-underline.png) bottom left repeat-x;
+      background-size: auto 4px;
+      display: inline-block;
+      float: left;
+      @include font-size(3.6);
+      padding-bottom: 5px;
+    }
+  }
+
+  &-body {
+    padding: 20px;
+    overflow: hidden;
+  }
+}
+
+
 
 
 // faq and 3 important things

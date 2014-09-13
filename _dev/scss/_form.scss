@@ -1,11 +1,17 @@
 
-.form-control:not(select), .btn {
+.btn {
   border: none;
 }
 
 .form-control {
+  background-color: $color-lightgrey;
   box-shadow: none;
   border-color: darken($border-color,5);
+
+  &:focus, &:active {
+    background-color: lighten($color-lightgrey,2);
+    //box-shadow: none;
+  }
 }
 
 .btn {
@@ -39,4 +45,24 @@
 select.form-control {
   @include background-image(linear-gradient(#fff 0, $color-lightgrey 75%));
   //background: $color-lightgrey;
+}
+
+
+//parsley
+.parsley {
+
+  &-error {
+    border-color: $color-fail;
+  }
+
+  &-required, &-custom-error-message, &-type {
+    color: $color-fail;
+    @include font-size(1.3);
+    margin-top: 5px;
+    margin-bottom: 0;
+  }
+
+  &-success {
+    border-color: $color-success;
+  }
 }
