@@ -84,10 +84,16 @@ $(document).ready(function(){
 
   // Get the course name
   $('#more-course-name').text($('.comparison-header-title').text());
+  $('#courseName').attr('value',$('.comparison-header-title').text());
 
   // Get the school name
   $('.btn-moreinfo').on('click', function(){
     $('#more-school-name').text($(this).parents('tr').find('.uni-info-title').text());
+    $('#schoolName').attr('value',$(this).parents('tr').find('.uni-info-title').text());
+    if($('.more-form').is(':hidden')) {
+      $('.more-form').show().siblings('.more-success').hide();
+    }
+
   });
 
   $('.btn-moreinfo').fancybox({
@@ -100,40 +106,58 @@ $(document).ready(function(){
   // form submit
 
   $('#leadform').submit(function(e){
-    var toEmail = window.atob('amF5aGFuMjAwM0BnbWFpbC5jb20=');
+    //var toEmail = window.atob('amF5aGFuMjAwM0BnbWFpbC5jb20=');
+
+    // $.ajax({
+    //   type: 'POST',
+    //   url: 'https://mandrillapp.com/api/1.0/messages/send.json',
+    //   data: {
+    //     'key': '6HbKslPPJKF61NBRn45rxg',
+    //     'message': {
+    //       'from_email': $('#email').val(),
+    //       'from_name': $('#name').val(),
+    //       'headers': {
+    //                     'Reply-To': $('#email').val()
+    //                 },
+    //       'to': [
+    //           {
+    //             'email': toEmail,
+    //             'name': 'Jayhan Sim',
+    //             'type': 'to'
+    //           }
+    //         ],
+    //       'subject': 'YOUniversity enquiries',
+    //       'html': '<p>Name: ' + $('#name').val() + '</p>' +
+    //               '<p>Email: ' + $('#email').val() + '</p>' +
+    //               '<p>Phone: ' + $('#phone').val() + '</p>' +
+    //               '<p>Enquiries: ' + $('.comparison-header-title').text() + ' in ' +  $('#more-school-name').text()
+    //     }
+    //   },
+    //   beforeSend: function(){
+    //     $('#btn-submit').text('Submitting...');
+    //   }
+    //  }).done(function(response) {
+    //     $('.more-form').hide().siblings('.more-success').fadeIn();
+    //     console.log(response);
+    //  });
+
+    /*var data =  '<p>Name: ' + $('#name').val() + '</p>' +
+                '<p>Email: ' + $('#email').val() + '</p>' +
+                '<p>Phone: ' + $('#phone').val() + '</p>' +
+                '<p>Enquiries: ' + $('.comparison-header-title').text() + ' in ' +  $('#more-school-name').text();*/
 
     $.ajax({
       type: 'POST',
-      url: 'https://mandrillapp.com/api/1.0/messages/send.json',
-      data: {
-        'key': '6HbKslPPJKF61NBRn45rxg',
-        'message': {
-          'from_email': $('#email').val(),
-          'from_name': $('#name').val(),
-          'headers': {
-                        'Reply-To': $('#email').val()
-                    },
-          'to': [
-              {
-                'email': toEmail,
-                'name': 'Jayhan Sim',
-                'type': 'to'
-              }
-            ],
-          'subject': 'YOUniversity enquiries',
-          'html': '<p>Name: ' + $('#name').val() + '</p>' +
-                  '<p>Email: ' + $('#email').val() + '</p>' +
-                  '<p>Phone: ' + $('#phone').val() + '</p>' +
-                  '<p>Enquiries: ' + $('.comparison-header-title').text() + ' in ' +  $('#more-school-name').text()
-        }
-      },
+      url: 'php/sendmail.php',
+      data: $('#leadform').serialize(),
       beforeSend: function(){
         $('#btn-submit').text('Submitting...');
       }
-     }).done(function(response) {
-        $('.more-form').hide().siblings('.more-success').fadeIn();
-        console.log(response);
-     });
+    }).done(function(response){
+      $('.more-form').hide().siblings('.more-success').fadeIn();
+      $('#btn-submit').text('Submit');
+      console.log(response);
+    });
 
 
     e.preventDefault();
