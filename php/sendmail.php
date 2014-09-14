@@ -1,10 +1,11 @@
 <?php
-  $to = "nicole.teo91@gmail.com";
+  $to = 'nicole.teo91@gmail.com';
   $from = $_REQUEST['email'];
   $name = $_REQUEST['name'];
   $phone = $_REQUEST['phone'];
   $courseName = $_REQUEST['courseName'];
   $schoolName = $_REQUEST['schoolName'];
+  $questions = $_REQUEST['questions'];
   $headers = "From: $from";
   $subject = "YOUniversity enquiries";
 
@@ -14,6 +15,7 @@
   $fields{"phone"} = "phone";
   $fields{"courseName"} = "courseName";
   $fields{"schoolName"} = "schoolName";
+  $fields{"questions"} = "questions";
 
   $body = "You got a new enquiry!\n\n";
   foreach($fields as $a => $b){

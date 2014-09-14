@@ -153,14 +153,29 @@ $(document).ready(function(){
       beforeSend: function(){
         $('#btn-submit').text('Submitting...');
       }
-    }).done(function(response){
+    }).done(function(){
       $('.more-form').hide().siblings('.more-success').fadeIn();
       $('#btn-submit').text('Submit');
-      console.log(response);
+      //console.log(response);
     });
 
 
     e.preventDefault();
+  });
+
+
+
+  // charLimit
+  $('#questions').on('keyup', function(){
+
+    var length = $(this).val().length,
+        maxLength = 250;
+
+    if (length > maxLength) {
+      $('#charLimit').addClass('text-danger').text( length - maxLength + ' characters exceeded');
+    } else {
+      $('#charLimit').removeClass('text-danger').text( maxLength - length + ' characters left');
+    }
   });
 
 });
