@@ -5,3 +5,13 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+.text {
+  &-success {
+    color: $color-success;
+  }
+
+  &-danger {
+    color: $color-fail;
+  }
+}
