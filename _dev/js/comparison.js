@@ -21,7 +21,6 @@ $(document).ready(function(){
   });
 
 
-
   // checking the hash change event
   $(window).on('hashchange', function(){
 
@@ -46,9 +45,9 @@ $(document).ready(function(){
     format: function(s, table, cell, cellIndex) {
       var $cell = $(cell);
       if (cellIndex === 2) {
-        return $cell.attr('data-score') || s;
-      } else if (cellIndex === 3) {
         return $cell.attr('data-fee') || s;
+      // } else if (cellIndex === 3) {
+      //   return $cell.attr('data-fee') || s;
       } else if (cellIndex === 5) {
         return $cell.attr('data-month') || s;
       }
@@ -61,23 +60,56 @@ $(document).ready(function(){
 
   $('.comparison-table').tablesorter({
     sortList: [[2,1]],
-    widgets : ["zebra", "columns"],
+    widgets : ["zebra", "columns", "filter"],
+    widgetOptions: {
+      filter_functions: {
+        2 : {
+          //"> $0": function(e, n, f, i) { return n > 0;},
+          "< $20000": function(e, n, f, i) { return n <= 20000;},
+          "$20001 - $30000": function(e,n,f,i){return n >= 20001 && n <= 30000;},
+          "> $30001": function(e,n,f,i){return n >= 30001;}
+        }
+      }
+    },
+
     headers: {
       2: {
         sorter: 'data',
         sortInitialOrder: 'desc'
       },
-      3: {
-        sorter: 'data'
-      },
+      // 3: {
+      //   sorter: 'data'
+      // },
       5: {
         sorter: 'data'
       },
       6: {
         sorter: false
       }
+    },
+    initialized: function(table) {
+        // target select
+        var i, o, select = $(table).find('select.tablesorter-filter');
+        $('#tuition-fee').change(function() {
+            i = $(this).val();
+            select[0].options[i].selected = true;
+            select.trigger('change');
+        });
     }
   });
+
+  // $('#tuition-fee').change(function(){
+  //   var filterColumn = $(this).data('filter-column');
+  //   //console.log(filterColumn);
+  //   var filters = [],
+  //     col = filterColumn, // zero-based index
+  //     txt = $(this).val();
+
+  //   filters[col] = txt;
+  //   // using "table.hasFilters" here to make sure we aren't targetting a sticky header
+  //   $.tablesorter.setFilters( $('.comparison-table'), filters, true ); // new v2.9
+  //   return false;
+  // });
 
 
   // Modal

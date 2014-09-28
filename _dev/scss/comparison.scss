@@ -175,7 +175,13 @@ $color-tab-selected: #ffe87a;
   }
 }
 
+table.tablesorter .tablesorter-filter, .tablesorter-filter-row {
+  display: none !important;
+}
+
 .comparison-table {
+  table-layout: fixed;
+
   thead {
     > tr {
       >th {
